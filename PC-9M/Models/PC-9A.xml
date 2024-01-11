@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>PC-9A.ac</path>
+  <offsets>
+    <pitch-deg>-1.0</pitch-deg>
+    <heading-deg>0</heading-deg>
+    <roll-deg>0</roll-deg>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>-0.45</z-m>
+  </offsets>
+
+  <model>
+    <usage>interior</usage>
+    <path>Aircraft/PC-9M/Models/Cockpit/Cockpit.xml</path>
+  </model>
+
+  <effect>
+    <inherits-from>Aircraft/PC-9M/Models/Effects/bumpspec-reflection</inherits-from>
+    <object-name>spinner</object-name>
+    <object-name>hull</object-name>
+    <object-name>bumper</object-name>
+    <object-name>arch</object-name>
+    <object-name>rudder</object-name>
+    <object-name>hstab</object-name>
+    <object-name>elevator</object-name>
+    <object-name>wing</object-name>
+    <object-name>airbrake</object-name>
+    <object-name>riflap</object-name>
+    <object-name>liflap</object-name>
+    <object-name>roflap</object-name>
+    <object-name>loflap</object-name>
+    <object-name>raileron</object-name>
+    <object-name>laileron</object-name>
+    <object-name>frdoor</object-name>
+    <object-name>fldoor</object-name>
+    <object-name>rbodoor</object-name>
+    <object-name>rbdoor</object-name>
+    <object-name>lbodoor</object-name>
+    <object-name>lbdoor</object-name>
+    <object-name>fgeargrp</object-name>
+    <object-name>lgeargrp</object-name>
+    <object-name>rgeargrp</object-name>
+  </effect>
+
+  <!-- glass effects -->
+  <effect>
+    <inherits-from>Aircraft/PC-9M/Models/Effects/glass/glass</inherits-from>
+    <object-name>canopy_inner</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Aircraft/PC-9M/Models/Effects/glass/reflection</inherits-from>
+    <object-name>canopy_outer</object-name>
+  </effect>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>canopy</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <greater-than>
+        <property>sim/multiplay/generic/float[6]</property>
+        <value>9</value>
+      </greater-than>
+      <property>/sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>canopy</object-name>
+    <object-name>prop</object-name>
+    <object-name>pdisk</object-name>
+  </effect>
+
+</PropertyList>
